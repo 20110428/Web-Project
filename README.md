@@ -30,32 +30,35 @@ This project is a news management system with the following features:
 
 ## Project Structure
 news_app/
-├── app.js                     # Main application file
+├── app.js                    # File chính của ứng dụng
 ├── config/
-│   └── db.config.js           # Database configuration
+│   └── db.config.js          # Cấu hình database
 ├── controllers/
-│   ├── user.controller.js     # User-related logic
-│   └── post.controller.js     # Post-related logic
+│   ├── user.controller.js    # Xử lý logic người dùng
+│   └── post.controller.js    # Xử lý logic bài viết
 ├── models/
-│   ├── User.js                # User model
-│   ├── Post.js                # Post model
-│   ├── Category.js            # Category model
-│   └── Tag.js                 # Tag model
+│   ├── User.js               # Model người dùng
+│   ├── Post.js               # Model bài viết
+│   ├── Category.js           # Model chuyên mục
+│   └── Tag.js                # Model nhãn
 ├── routes/
-│   ├── index.js               # Main routes
-│   ├── user.routes.js         # User routes
-│   └── post.routes.js         # Post routes
-├── views/
-│   ├── index.ejs              # Homepage view
-│   ├── login.ejs              # Login view
-│   ├── register.ejs           # Registration view
-│   ├── post.ejs               # Single post view
-│   └── layout.ejs             # Layout template
+│   ├── index.js              # Routes chính
+│   ├── user.routes.js        # Routes người dùng
+│   └── guest.routes.js       # Routes độc giả vãng lai
 ├── public/
-│   └── css/
-│       └── style.css          # CSS styling
-└── .env                       # Environment variables
-
+│   ├── html/
+│   │   ├── index.html        # Trang chủ
+│   │   ├── category.html     # Danh sách bài viết
+│   │   ├── article.html      # Chi tiết bài viết
+│   │   └── search.html       # Kết quả tìm kiếm
+│   ├── css/
+│   │   ├── index.css         # CSS trang chủ
+│   │   ├── category.css      # CSS danh sách bài viết
+│   │   ├── article.css       # CSS chi tiết bài viết
+│   │   └── search.css        # CSS kết quả tìm kiếm
+│   └── images/
+│       └── placeholder.jpg   # Ảnh mẫu
+└── .env                      # Biến môi trường
 
 ## Getting Started
 
