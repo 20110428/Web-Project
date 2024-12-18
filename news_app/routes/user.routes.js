@@ -11,3 +11,5 @@ router.get('/profile/:id', userController.getProfile);
 router.put('/profile/:id', userController.updateProfile);
 
 module.exports = router;
+
+router.post('/extend-subscription', extendSubscriber);
