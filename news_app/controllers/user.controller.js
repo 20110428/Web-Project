@@ -34,3 +34,24 @@ const UserController = {
 };
 
 module.exports = UserController;
+
+const extendSubscriber = async (req, res) => {
+    try {
+      const { userId } = req.body;
+      const user = await User.findById(userId);
+  
+      if (user && user.role === 'subscriber') {
+        const currentDate = new Date();
+        user.subscriptionEnd = new Date(currentDate.setDate(currentDate.getDate() + 7)); // Gia hạn thêm 7 ngày
+        await user.save();
+  
+        res.status(200).send('Subscription extended successfully.');
+      } else {
+        res.status(403).send('Invalid user.');
+      }
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Error extending subscription.');
+    }
+  };
+  

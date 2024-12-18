@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Write Article</title>
+  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>
+    tinymce.init({
+      selector: '#content',
+      plugins: 'image link media',
+      toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | link image media',
+      height: 500
+    });
+  </script>
+</head>
+<body>
+  <form action="/articles/create" method="POST" enctype="multipart/form-data">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required><br><br>
+    <label for="summary">Summary:</label>
+    <textarea id="summary" name="summary" required></textarea><br><br>
+    <label for="content">Content:</label>
+    <textarea id="content" name="content" required></textarea><br><br>
+    <label for="category">Category:</label>
+    <input type="text" id="category" name="category" required><br><br>
+    <label for="tags">Tags:</label>
+    <input type="text" id="tags" name="tags" placeholder="Comma-separated"><br><br>
+    <label for="image">Image:</label>
+    <input type="file" id="image" name="image" accept="image/*"><br><br>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
