@@ -30,35 +30,43 @@ This project is a news management system with the following features:
 
 ## Project Structure
 news_app/
-├── app.js                    # File chính của ứng dụng
+├── app.js                      # File chính của ứng dụng
+├── package.json                # Khai báo dependencies và scripts
+├── package-lock.json           # Khóa version dependencies
 ├── config/
-│   └── db.config.js          # Cấu hình database
+│   ├── db.config.js            # Cấu hình database
+│   ├── passport.config.js      # Cấu hình PassportJS
 ├── controllers/
-│   ├── user.controller.js    # Xử lý logic người dùng
-│   └── post.controller.js    # Xử lý logic bài viết
+│   ├── user.controller.js      # Xử lý logic người dùng
+│   ├── post.controller.js      # Xử lý logic bài viết
+│   ├── auth.controller.js      # Xử lý logic xác thực
 ├── models/
-│   ├── User.js               # Model người dùng
-│   ├── Post.js               # Model bài viết
-│   ├── Category.js           # Model chuyên mục
-│   └── Tag.js                # Model nhãn
+│   ├── User.js                 # Model người dùng
+│   ├── Post.js                 # Model bài viết
+│   ├── Category.js             # Model chuyên mục
+│   ├── Tag.js                  # Model nhãn
 ├── routes/
-│   ├── index.js              # Routes chính
-│   ├── user.routes.js        # Routes người dùng
-│   └── guest.routes.js       # Routes độc giả vãng lai
+│   ├── index.js                # Routes chính
+│   ├── user.routes.js          # Routes người dùng
+│   ├── guest.routes.js         # Routes độc giả vãng lai
+│   ├── auth.routes.js          # Routes xác thực người dùng
+│   ├── writer.routes.js        # Routes cho phóng viên
 ├── public/
 │   ├── html/
-│   │   ├── index.html        # Trang chủ
-│   │   ├── category.html     # Danh sách bài viết
-│   │   ├── article.html      # Chi tiết bài viết
-│   │   └── search.html       # Kết quả tìm kiếm
+│   │   ├── index.html          # Trang chủ
+│   │   ├── category.html       # Danh sách bài viết
+│   │   ├── article.html        # Chi tiết bài viết
+│   │   ├── search.html         # Kết quả tìm kiếm
+│   │   ├── write.html          # Trang đăng bài viết (phóng viên)
 │   ├── css/
-│   │   ├── index.css         # CSS trang chủ
-│   │   ├── category.css      # CSS danh sách bài viết
-│   │   ├── article.css       # CSS chi tiết bài viết
-│   │   └── search.css        # CSS kết quả tìm kiếm
-│   └── images/
-│       └── placeholder.jpg   # Ảnh mẫu
-└── .env                      # Biến môi trường
+│   │   ├── index.css           # CSS trang chủ
+│   │   ├── category.css        # CSS danh sách bài viết
+│   │   ├── article.css         # CSS chi tiết bài viết
+│   │   ├── search.css          # CSS kết quả tìm kiếm
+│   ├── images/
+│   │   └── placeholder.jpg     # Ảnh mẫu
+│   ├── uploads/                # Lưu trữ ảnh bài viết
+├── .env                        # Biến môi trường
 
 ## Getting Started
 
